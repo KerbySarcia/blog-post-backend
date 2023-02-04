@@ -1,3 +1,5 @@
 202302	08:05:02	ba0e7d01-03fb-4949-baff-2327d1459473	Error: Not Allowed by CORS	GET	/	https://www.youtube.com
 202302	08:05:34	d246315f-552e-4025-883c-70f5fec39906	Error: Not Allowed by CORS	OPTIONS	/	https://www.google.com
 202302	08:05:34	219ea419-6ea0-476e-a188-abb74bb538d4	Error: Not Allowed by CORS	GET	/	https://www.google.com
+202302	08:46:56	e16360f8-baff-40d0-9877-a03a4196bf7c	SyntaxError: Unexpected token } in JSON at position 35	GET	/posts	undefined
+202302	08:53:38	cd0a5e8d-877a-4e9d-9ee7-248d1fa93ab1	SyntaxError: Unexpected token } in JSON at position 46	DELETE	/posts	undefined

@@ -25,6 +25,7 @@ app.use(cookieParser());
 
 // Routes
 app.use("/", require("./router/indexRoutes"));
+app.use("/posts", require("./router/postRoutes"));
 
 // 404
 app.all("*", (req, res) => {
