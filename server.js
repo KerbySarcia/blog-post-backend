@@ -25,6 +25,8 @@ app.use(cookieParser());
 
 // Routes
 app.use("/", require("./router/indexRoutes"));
+app.use("/auth", require("./router/authRoutes"));
+app.use("/users", require("./router/userRoutes"));
 app.use("/posts", require("./router/postRoutes"));
 
 // 404
