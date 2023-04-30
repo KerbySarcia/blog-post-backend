@@ -5,11 +5,11 @@ const bcrypt = require("bcrypt");
 //@route POST /users
 //@access PUBLIC
 const createUser = async (req, res) => {
-  const { username, password } = req.body;
-  if (!username || !password)
+  const { username, password, avatar } = req.body;
+  if (!username || !password || !avatar)
     return res
       .status(400)
-      .json({ message: "Username and Passwor are required" });
+      .json({ message: "Username and Password are required" });
 
   // check if there is a duplicate
   const duplicate = await User.findOne({ username: username })
@@ -24,6 +24,7 @@ const createUser = async (req, res) => {
   const result = await User.create({
     username,
     password: hashPass,
+    avatar,
   });
 
   if (result) res.json(`${result.username} successfully created`);

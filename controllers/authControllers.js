@@ -26,10 +26,14 @@ const login = async (req, res) => {
   // Create Tokens
   const accessToken = jwt.sign(
     {
-      UserInfo: { username: foundUser.username, roles: foundUser.roles },
+      UserInfo: {
+        username: foundUser.username,
+        roles: foundUser.roles,
+        avatar: foundUser.avatar,
+      },
     },
     process.env.ACCESS_TOKEN_SECRET,
-    { expiresIn: "60s" }
+    { expiresIn: "15m" }
   );
 
   const refreshToken = jwt.sign(
@@ -66,15 +70,19 @@ const refresh = async (req, res) => {
       .collation({ locale: "en", strength: 2 })
       .exec();
 
-    if (!foundUser) return res.status(400).json({ message: "Unauthorized" });
+    if (!foundUser) return res.status(401).json({ message: "Unauthorized" });
 
     const accessToken = jwt.sign(
       {
-        UserInfo: { username: foundUser.username, roles: foundUser.roles },
+        UserInfo: {
+          username: foundUser.username,
+          roles: foundUser.roles,
+          avatar: foundUser.avatar,
+        },
       },
       process.env.ACCESS_TOKEN_SECRET,
       {
-        expiresIn: "60s",
+        expiresIn: "15m",
       }
     );
 

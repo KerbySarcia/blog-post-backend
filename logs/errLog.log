@@ -7,3 +7,8 @@
 202302	13:49:58	a2d030b3-3e7b-43dd-a2f9-734810a26f2e	ValidationError: Post validation failed: time: Path `time` is required.	POST	/posts	http://localhost:3000
 202302	13:52:31	b92344a7-ce2e-4246-9e26-30954ee1a714	ValidationError: Post validation failed: time: Path `time` is required.	POST	/posts	http://localhost:3000
 202302	13:53:07	2d797f26-81a7-4837-bd2b-0bee8194bde0	ValidationError: Post validation failed: time: Path `time` is required.	POST	/posts	http://localhost:3000
+202302	07:08:37	114c0377-867c-434a-95d2-0a068350aefb	ValidationError: Post validation failed: avatar: Path `avatar` is required.	PATCH	/posts	http://localhost:3000
+202302	07:09:31	9287db2a-da65-4ebc-9804-21671819d260	ValidationError: Post validation failed: avatar: Path `avatar` is required.	POST	/posts	http://localhost:3000
+202302	07:10:01	11b46dbe-73d8-4c8c-80e0-51e1a797cac8	ValidationError: Post validation failed: avatar: Path `avatar` is required.	POST	/posts	http://localhost:3000
+202302	07:10:16	25d792dd-bca8-4b3b-b9c3-4b808fca24c1	ValidationError: Post validation failed: avatar: Path `avatar` is required.	PATCH	/posts	http://localhost:3000
+202302	07:10:59	c0a0692a-d409-4f5b-bb0f-3b6c36d51342	ValidationError: Post validation failed: avatar: Path `avatar` is required.	POST	/posts	http://localhost:3000

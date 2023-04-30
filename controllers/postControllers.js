@@ -15,8 +15,9 @@ const getPosts = async (req, res) => {
 //@route POST /posts
 //@access PRIVATE
 const addPost = async (req, res) => {
-  const { title, body, user, time } = req.body;
-  if (!title || !body)
+  const { title, body, time, username, avatar } = req.body;
+
+  if (!title || !body || !username || !avatar)
     return res.status(400).json({ message: "Title and Body are required" });
 
   // add post
@@ -24,7 +25,8 @@ const addPost = async (req, res) => {
     title,
     body,
     time,
-    user: user ? user : "Anonymous",
+    avatar,
+    user: username,
   });
 
   if (result) res.json({ message: "Posts Successfully added" });

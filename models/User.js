@@ -14,6 +14,10 @@ const userSchema = moongose.Schema(
       type: [String],
       default: ["User"],
     },
+    avatar: {
+      type: String,
+      default: "one",
+    },
   },
   {
     timestamps: true,

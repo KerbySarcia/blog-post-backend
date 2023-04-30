@@ -1,6 +1,10 @@
 const moongose = require("mongoose");
 
 const postSchema = moongose.Schema({
+  avatar: {
+    type: String,
+    required: true,
+  },
   user: {
     type: String,
     default: "Anonymous",
@@ -20,9 +24,9 @@ const postSchema = moongose.Schema({
   reactions: {
     type: {},
     default: {
-      like: 0,
-      heart: 0,
-      sad: 0,
+      like: [],
+      heart: [],
+      sad: [],
     },
   },
   comments: {
